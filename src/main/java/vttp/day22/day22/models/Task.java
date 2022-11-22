@@ -8,7 +8,8 @@ public class Task {
     public String priority;
     public String completionDate;
 
-    //assignTo should be a User class instead of a String to create a relationship
+    //assignTo should be a User class instead of a String to create a relationship. then when creating, you use a task.getUser().getUsername();
+    //can also set the priority to enum, then when you do the get in the repo, it use task.getPriority().toString();
 
     public String getTaskId() {
         return taskId;

@@ -89,7 +89,8 @@ public class UserController {
             
             try {
                 if (userRepo.verifyUser(username, password) == 0) {
-                    System.out.println(">>>>>> error! user not found :(");
+                    System.out.println(">>>>>> error! failed authentication! :(");
+                    model.addAttribute("errorMsg", "failed authentication!");
                     return "error";
                     } else {
                     userSvc.createTask(user, task);
